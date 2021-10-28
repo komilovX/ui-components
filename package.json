@@ -1,15 +1,20 @@
 {
-  "name": "@komilovX/ui-components",
+  "name": "@komilovx/ui-components",
   "version": "0.8.0",
+  "main": "./dist/ui-components.cjs.js",
+  "module": "./dist/ui-components.esm-bundler.js",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "rollup": "npx rollup -c rollup.config.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "rollup-plugin-typescript2": "^0.30.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -30,9 +35,16 @@
     "babel-loader": "^8.2.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "rollup": "^2.58.3",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-vue": "^6.0.0",
     "typescript": "~4.1.5",
     "vue-loader": "^16.8.2"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "eslintConfig": {
     "root": true,
     "env": {

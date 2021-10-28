@@ -16,7 +16,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@komilovX"
       - run: npm ci
-      - run: npm run build
+      - run: npm run rollup
       - run: npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

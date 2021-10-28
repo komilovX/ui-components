@@ -1,5 +1,5 @@
 <template>
-  <ap-button label="ad" />
+  <div>App</div>
 </template>
 
 <script lang="ts">
