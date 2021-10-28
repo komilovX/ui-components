@@ -1,6 +1,2 @@
-import Button from "./components/Button/Button.vue";
-
-const components = {
-  Button,
-};
-export default components;
+export * as Button2 from "./components/Button/Button.vue";
+export * as Button from "./components/Button/Button.vue";
