@@ -1,6 +1,7 @@
 import ts from "rollup-plugin-typescript2";
 import vue from "rollup-plugin-vue";
-import css from "rollup-plugin-css-only";
+// import css from "rollup-plugin-css-only";
+import postcss from "rollup-plugin-postcss";
 import pkg from "./package.json";
 
 function createEntry(options) {
@@ -25,8 +26,10 @@ function createEntry(options) {
           },
         },
       }),
-      css({ output: "bundle.css" }),
-      vue({ css: false }),
+      vue({
+        preprocessStyles: true,
+      }),
+      postcss(),
     ],
   };
 
