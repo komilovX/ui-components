@@ -23,6 +23,7 @@ function createEntry(options) {
           compilerOptions: {
             declaration: options.format === "es",
           },
+          exclude: ["src", "example"],
         },
       }),
       css({ output: false }),
