@@ -1,12 +1,14 @@
 import ts from "rollup-plugin-typescript2";
 import vue from "rollup-plugin-vue";
-// import css from "rollup-plugin-css-only";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+// import commonjs from "@rollup/plugin-commonjs";
 import postcss from "rollup-plugin-postcss";
 import pkg from "./package.json";
 
 function createEntry(options) {
   const config = {
-    input: "./src/components/Button/Button.vue",
+    input: "./src/index.ts",
     external: ["vue"],
     output: {
       name: "UiComponents",
@@ -18,6 +20,8 @@ function createEntry(options) {
       },
     },
     plugins: [
+      peerDepsExternal(),
+      resolve(),
       ts({
         check: options.format === "es",
         tsconfigOverride: {

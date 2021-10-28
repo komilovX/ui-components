@@ -1,8 +1,8 @@
 {
   "name": "@komilovx/ui-components",
   "version": "0.12.0",
-  "main": "./dist/ui-components.cjs.js",
-  "module": "./dist/ui-components.esm-bundler.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm-bundler.js",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,13 +14,14 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "rollup-plugin-typescript2": "^0.30.0",
     "vue": "^3.0.0",
     "postcss": "^8.1.9",
     "postcss-import": "12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
@@ -39,9 +40,11 @@
     "eslint-plugin-vue": "^7.0.0",
     "rollup": "^2.58.3",
     "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",
-    "typescript": "~4.1.5",
+    "typescript": "^4.1.6",
     "vue-loader": "^16.8.2"
   },
   "files": [
