@@ -1,6 +1,6 @@
 {
   "name": "@komilovx/ui-components",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "main": "./dist/ui-components.cjs.js",
   "module": "./dist/ui-components.esm-bundler.js",
   "license": "MIT",
