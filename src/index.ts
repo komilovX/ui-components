@@ -1,2 +1,3 @@
-export * as Button2 from "./components/Button/Button.vue";
-export * as Button from "./components/Button/Button.vue";
+import Button1 from "./components/Button/Button.vue";
+
+export const Button = Button1;
